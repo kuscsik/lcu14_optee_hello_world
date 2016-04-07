@@ -26,13 +26,20 @@
  */
 
 #include <stdio.h>
+#include <string.h>
 #include <err.h>
 #include <tee_client_api.h>
 #include <ta_hello_world.h>
 
 int main(int argc, char *argv[])
 {
+  /* Silence unused arguments warning */
+
+	(void) argc;
+	(void) argv;
+
 	TEEC_Result res;
+
 	TEEC_Context ctx;
 	TEEC_Session sess;
 	TEEC_Operation op;
